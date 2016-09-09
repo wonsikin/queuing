@@ -13,6 +13,7 @@ func main() {
 	log.SetLevel(log.DebugLevel)
 
 	addr := ":7002"
+	http.Handle("/", http.FileServer(http.Dir("static")))
 	http.HandleFunc("/seq", handler)
 
 	log.Infof("seq http is listening, addr = %s", addr)
