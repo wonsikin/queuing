@@ -17,7 +17,7 @@
             xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
         }
 
-        xmlhttp.open('GET', '/seq', true);
+        xmlhttp.open('GET', 'seq', true);
         xmlhttp.send();
 
         xmlhttp.onreadystatechange = function () {
