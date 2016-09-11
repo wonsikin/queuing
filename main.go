@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/CardInfoLink/log"
-	"github.com/wonsikin/seq/goconf"
+	"github.com/wonsikin/queuing/goconf"
 )
 
 func main() {
