@@ -24,8 +24,8 @@ func main() {
 // 序号格式为 YMMDD%d。 %d为至少两位的数字
 func handler(w http.ResponseWriter, r *http.Request) {
 	s := goconf.SeqTick()
-	d := time.Now().Format("60102")
-	result := fmt.Sprintf("%s%02d", d, s)
+	d := time.Now().Format("060102")
+	result := fmt.Sprintf("%s%02d", d[1:], s)
 
 	msg := fmt.Sprintf(`{"seq": "%s"}`, result)
 	w.Write([]byte(msg))
